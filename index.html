@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="app.css">
+    <meta http-equiv="Content-Type" content="video/mp2t">
+    <link rel="stylesheet" href="input.scss">
   </head>
   <body>
-      <div class="grid grid-rows-2 w-screen h-screen bg-neutral-900">
-          <div class="w-full h-full"></div>
-          <div class="bg-yellow-500 w-full h-full"></div>
+      <div class="grid grid-cols-2 w-screen h-screen bg-neutral-800">
+          <div id="editor" class="w-full h-full border-r-4 border-neutral-900"></div>
+          <div class="w-full h-full bg-green-100"></div>
       </div>
   </body>
+  <script type="module" src="index.ts"></script>
 </html>

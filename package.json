@@ -1,14 +1,15 @@
 {
   "name": "jsplayground",
-  "module": "index.ts",
-  "type": "module",
   "scripts": {
-    "watch": "tailwindcss -i ./input.scss -o ./app.css --watch & five-server"
+    "watch": "parcel index.html"
   },
   "devDependencies": {
+    "@codemirror/lang-javascript": "^6.1.0",
+    "@parcel/transformer-sass": "^2.7.0",
     "bun-types": "^0.1.0",
+    "codemirror": "^6.0.1",
     "five-server": "^0.1.6",
-    "nodemon": "^2.0.20",
+    "parcel": "^2.7.0",
     "tailwindcss": "^3.1.8"
   },
   "dependencies": {}
