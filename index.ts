@@ -23,7 +23,7 @@ const editor = new EditorView({
 
 runButton.addEventListener('click', () => {
   const result = evaluate(editor.state.doc.toString())
-  document.getElementById('console').innerText = result
+  document.getElementById('console').innerText = document.getElementById('console').innerText + '\n' + result
 });
 
 function emptyEditor(view) {
