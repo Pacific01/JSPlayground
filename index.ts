@@ -1,9 +1,15 @@
 import { EditorState } from '@codemirror/state'
-import { EditorView, lineNumbers } from '@codemirror/view'
+import { EditorView, lineNumbers, keymap } from '@codemirror/view'
+import { indentWithTab } from "@codemirror/commands"
 import { dracula } from '@uiw/codemirror-theme-dracula'
 import { javascript } from "@codemirror/lang-javascript"
 
-const extensions = [dracula, javascript(), lineNumbers()]
+const extensions = [
+    dracula,
+    javascript(),
+    lineNumbers(),
+    keymap.of([indentWithTab]),
+]
 
 const editorState = EditorState.create({
   extensions
