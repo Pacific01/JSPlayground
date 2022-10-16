@@ -1,0 +1,11 @@
+{
+  "name": "jsplayground",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "^0.1.0"
+  },
+  "dependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
