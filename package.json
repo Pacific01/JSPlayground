@@ -2,10 +2,14 @@
   "name": "jsplayground",
   "module": "index.ts",
   "type": "module",
-  "devDependencies": {
-    "bun-types": "^0.1.0"
+  "scripts": {
+    "watch": "tailwindcss -i ./input.scss -o ./app.css --watch & five-server"
   },
-  "dependencies": {
+  "devDependencies": {
+    "bun-types": "^0.1.0",
+    "five-server": "^0.1.6",
+    "nodemon": "^2.0.20",
     "tailwindcss": "^3.1.8"
-  }
+  },
+  "dependencies": {}
 }
