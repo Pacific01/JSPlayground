@@ -3,6 +3,7 @@ import { EditorView, lineNumbers, keymap } from '@codemirror/view'
 import { indentWithTab } from "@codemirror/commands"
 import { dracula } from '@uiw/codemirror-theme-dracula'
 import { javascript } from "@codemirror/lang-javascript"
+import Interpreter from 'js-interpreter'
 
 const extensions = [
   dracula,
@@ -12,19 +13,20 @@ const extensions = [
 ]
 
 const editorState = EditorState.create({
-  doc: "function multiply(a, b) {\n  return a*b\n}\nmultiply(2, 2)",
+  doc: "function multiply(a, b) {\n  return a*b\n}\nvar m = multiply(2, 2)\nlog(m)",
   extensions
 })
 
-const editor = new EditorView({
+let editor = new EditorView({
   parent: document.getElementById('editor'),
   state: editorState
 })
 
 runButton.addEventListener('click', () => {
+  console.log("EDITORVAL", editor.state.doc.toString())
   const result = evaluate(editor.state.doc.toString())
   document.getElementById('console').innerText = document.getElementById('console').innerText + '\n' + result
-});
+})
 
 function emptyEditor(view) {
   let text = view.state.doc.toString()
@@ -37,10 +39,23 @@ function emptyEditor(view) {
 
 function evaluate(str:string): String {
   let result = ''
+  let values = []
   try {
-    result = eval(str)
+
+    const initFunc = (interpreter, globalObject) => {
+      const wrapper = (text) => {
+        values.push(text)
+      }
+      interpreter.setProperty(
+        globalObject,
+        'log',
+        interpreter.createNativeFunction(wrapper)
+      )
+    }
+    var myInterpreter = new Interpreter(str, initFunc)
+    myInterpreter.run()
+    result = values.join('\n')
   } catch (e) {
-    console.log(e)
     result = e + '\n' + e.stack
   }
   return new String(result)

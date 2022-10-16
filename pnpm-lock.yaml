@@ -9,8 +9,10 @@ specifiers:
   '@uiw/codemirror-theme-dracula': ^4.12.4
   bun-types: ^0.1.0
   five-server: ^0.1.6
+  js-interpreter: ^3.0.1
   parcel: ^2.7.0
   tailwindcss: ^3.1.8
+  vm-browserify: ^1.1.2
 
 devDependencies:
   '@codemirror/commands': 6.1.2
@@ -21,8 +23,10 @@ devDependencies:
   '@uiw/codemirror-theme-dracula': 4.12.4_wexih7u53rronqz75khnd5p7z4
   bun-types: 0.1.11
   five-server: 0.1.6
+  js-interpreter: 3.0.1
   parcel: 2.7.0_postcss@8.4.18
   tailwindcss: 3.1.8_postcss@8.4.18
+  vm-browserify: 1.1.2
 
 packages:
 
@@ -1923,6 +1927,13 @@ packages:
       is-docker: 2.2.1
     dev: true
 
+  /js-interpreter/3.0.1:
+    resolution: {integrity: sha512-5mUA4dzfjaR2Yo7DrWKKvCDX1p6yUkSlRSjvVmgHxr6G9DhiPXSrg56A3GXsVQBXfdWb7cOYE5JSW1/BgSv/8g==}
+    hasBin: true
+    dependencies:
+      minimist: 1.2.7
+    dev: true
+
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
     dev: true
@@ -2850,6 +2861,10 @@ packages:
   /vary/1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
+    dev: true
+
+  /vm-browserify/1.1.2:
+    resolution: {integrity: sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==}
     dev: true
 
   /w3c-keyname/2.2.6:
