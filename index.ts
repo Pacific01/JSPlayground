@@ -1,14 +1,26 @@
-import {basicSetup, EditorView} from "codemirror"
-import {javascript} from "@codemirror/lang-javascript"
+import { EditorState } from '@codemirror/state'
+import { EditorView, lineNumbers } from '@codemirror/view'
+import { dracula } from '@uiw/codemirror-theme-dracula'
+import { javascript } from "@codemirror/lang-javascript"
 
-const editor = new EditorView({
-  extensions: [basicSetup, javascript()],
-  parent: document.getElementById('editor')
+const extensions = [dracula, javascript(), lineNumbers()]
+
+const editorState = EditorState.create({
+  extensions
 })
 
-const console = new EditorView({
-  extensions: [basicSetup, javascript()],
-  parent: document.getElementById('console')
+const editor = new EditorView({
+  parent: document.getElementById('editor'),
+  state: editorState
+})
+
+const consoleState = EditorState.create({
+  extensions
+})
+
+const consoleEditor = new EditorView({
+  parent: document.getElementById('console'),
+  state: consoleState
 })
 
 const runButton = document.getElementById('runButton');
