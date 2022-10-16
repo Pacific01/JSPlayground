@@ -1,7 +1,9 @@
 {
   "name": "jsplayground",
+  "source": "index.html",
   "scripts": {
-    "watch": "parcel index.html"
+    "watch": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "devDependencies": {
     "@codemirror/commands": "^6.1.2",
