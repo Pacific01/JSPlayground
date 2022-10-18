@@ -4,20 +4,29 @@
 
 ## How to...
 
-* Develop:
+* Install:
+
+```sh
+npm Install
+```
+
+* Develop mode:
 
 ```sh
 npm run watch
 ```
 
-* Deploy:
+Once ready you can open the [localhost url](http://localhost:1234) and edit
+files and playtest at the same time.
+
+* Or Build for a server:
 
 ```sh
 npm run build
 ```
 
-Everything will be on `/dist` folder. You can user your favorite system to serve
-it.
+Everything will be on `/dist` folder. You can use all that files to deploy it to
+your favorite server, static site service, custom machine,...
 
 ## Bibliography
 
