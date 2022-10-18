@@ -2,6 +2,8 @@
 
 > Vanilla JavaScript Playground
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/06a0e5a8-9503-47fe-ae2c-af397e21b604/deploy-status)](https://app.netlify.com/sites/starlit-lily-b00e81/deploys)
+
 ## How to...
 
 * Install:
