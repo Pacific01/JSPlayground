@@ -1,6 +1,23 @@
 # JSPlayground
 
-Una sala de juegos donde probar y jugar con vanilla javascript.
+> Vanilla JavaScript Playground
+
+## How to...
+
+* Develop:
+
+```sh
+npm run watch
+```
+
+* Deploy:
+
+```sh
+npm run build
+```
+
+Everything will be on `/dist` folder. You can user your favorite system to serve
+it.
 
 ## Bibliography
 
